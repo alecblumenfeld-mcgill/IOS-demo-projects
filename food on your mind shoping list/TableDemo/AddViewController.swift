@@ -6,4 +6,9 @@
 //  Copyright (c) 2015 alec. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AddViewController: UIViewController{
+
+}
+

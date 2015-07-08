@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zx5-LX-iZX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Food_On_Your_Mind_Shoping_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="55" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-Sf-GO7">
+                                <rect key="frame" x="0.0" y="30" width="600" height="570"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="nSf-1N-CLh" detailTextLabel="F1t-GD-zOj" style="IBUITableViewCellStyleSubtitle" id="0PC-n2-rEv" customClass="listCell" customModule="Food_On_Your_Mind_Shoping_List" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0PC-n2-rEv" id="Rgy-Vc-J8y">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nSf-1N-CLh">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F1t-GD-zOj">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-check-grey" translatesAutoresizingMaskIntoConstraints="NO" id="1QO-pQ-QI5">
+                                                    <rect key="frame" x="562" y="8" width="30" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="c9D-4X-0n8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1QO-pQ-QI5" secondAttribute="trailing" constant="-7" id="K1d-dR-Kgl"/>
+                                                <constraint firstItem="1QO-pQ-QI5" firstAttribute="top" secondItem="Rgy-Vc-J8y" secondAttribute="topMargin" id="mRo-nn-8va"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1QO-pQ-QI5" secondAttribute="bottom" constant="-2.5" id="oGD-zv-lmE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="checkedImage" destination="1QO-pQ-QI5" id="d6g-vP-kFK"/>
+                                            <outlet property="subTitle" destination="F1t-GD-zOj" id="5eA-VQ-Ag2"/>
+                                            <outlet property="title" destination="nSf-1N-CLh" id="FER-n2-RZG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6aW-nn-35N"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="485-cH-GYV"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5hc-HL-RbV">
+                                <rect key="frame" x="180" y="72" width="241" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="Fcm-l0-SYI"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Remaining"/>
+                                    <segment title="Recipies"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lkV-5I-nLA"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="top" secondItem="5hc-HL-RbV" secondAttribute="bottom" constant="-70" id="4yf-9d-8wW"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5bZ-za-8y8"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="76B-4X-uGw"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Jf-pD-FxY"/>
+                            <constraint firstAttribute="trailing" secondItem="cdy-Sf-GO7" secondAttribute="trailing" id="F10-8q-iI6"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NVq-h5-do8"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PEP-vJ-yde"/>
+                            <constraint firstItem="5hc-HL-RbV" firstAttribute="centerX" secondItem="cdy-Sf-GO7" secondAttribute="centerX" id="Uoy-Lo-PxQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cdy-Sf-GO7" secondAttribute="trailing" constant="-46" id="aXL-VI-V5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cdy-Sf-GO7" secondAttribute="trailing" constant="-46" id="dqT-yi-cky"/>
+                            <constraint firstItem="5hc-HL-RbV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="j6J-Fz-SA8"/>
+                            <constraint firstItem="cdy-Sf-GO7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tkK-eL-rfk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cdy-Sf-GO7" secondAttribute="bottom" constant="-20" id="uRK-6v-T76"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="76B-4X-uGw"/>
+                                <exclude reference="8Jf-pD-FxY"/>
+                                <exclude reference="PEP-vJ-yde"/>
+                                <exclude reference="aXL-VI-V5P"/>
+                                <exclude reference="dqT-yi-cky"/>
+                                <exclude reference="tkK-eL-rfk"/>
+                                <exclude reference="uRK-6v-T76"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping List" id="4Cg-kg-3Hr">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="U6p-tk-hAn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WtF-q1-Rb0">
+                                <rect key="frame" x="538" y="72" width="46" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" red="0.25923503664154879" green="0.32913733350508323" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="cdy-Sf-GO7" id="0mQ-QX-1w3"/>
+                        <outletCollection property="listSelector" destination="5hc-HL-RbV" collectionClass="NSMutableArray" id="5xP-8F-RVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="fnL-Wl-ftp"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="-187"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P9D-1a-EDQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zx5-LX-iZX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfv-jc-d4I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5mV-qb-fX3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STq-YD-tcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-163"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-check-grey" width="40" height="40"/>
+    </resources>
+</document>
